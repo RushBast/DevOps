@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 version: '3'
 
 services:
@@ -22,3 +23,29 @@ services:
       MYSQL_DATABASE: mysql_database
       MYSQL_USER: root
       MYSQL_PASSWORD: root
+=======
+version: '3'
+
+services:
+  recipebook-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - recipebook-db
+    environment:
+      MYSQL_HOST: recipebook-db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: mysql_database
+
+  recipebook-db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: mysql_database
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+>>>>>>> 692c9d0 (intial commit)
