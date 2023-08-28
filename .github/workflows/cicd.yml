@@ -1,0 +1,30 @@
+name: CI/CD with Docker Compose
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Compose
+        run: docker-compose -f docker-compose.yml up -d
+
+      - name: Run tests with Docker Compose
+        run: |
+          # Wait for MySQL to be ready
+          while ! docker-compose -f docker-compose.yml exec mysql mysqladmin ping -hlocalhost --silent; do
+            sleep 1
+          done
+
+          # Run PHP tests
+          docker-compose -f docker-compose.yml exec php php /php/index.php
+
+      - name: Tear down Docker Compose
+        run: docker-compose -f docker-compose.yml down
