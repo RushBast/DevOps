@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3fe7ec1 (new changes)
 <?php
 // Establish database connection
 $servername = "localhost:3306";
@@ -230,6 +233,7 @@ modeSwitch.addEventListener("click" , () =>{
 
 </body>
 </html>
+<<<<<<< HEAD
 =======
 <?php
 // Establish database connection
@@ -463,3 +467,5 @@ modeSwitch.addEventListener("click" , () =>{
 </body>
 </html>
 >>>>>>> 692c9d0 (intial commit)
+=======
+>>>>>>> 3fe7ec1 (new changes)

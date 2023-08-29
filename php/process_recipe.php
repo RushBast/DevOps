@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3fe7ec1 (new changes)
 <?php
 // Establish database connection
 $servername = "localhost:3306";
@@ -116,6 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Close the database connection
 $conn->close();
 ?>
+<<<<<<< HEAD
 =======
 <?php
 // Establish database connection
@@ -235,3 +239,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conn->close();
 ?>
 >>>>>>> 692c9d0 (intial commit)
+=======
+>>>>>>> 3fe7ec1 (new changes)

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3fe7ec1 (new changes)
 <!DOCTYPE html>
 <html>
 <head>
@@ -254,6 +257,7 @@ modeSwitch.addEventListener("click" , () =>{
 });
     </script>
 </body>
+<<<<<<< HEAD
 =======
 <!DOCTYPE html>
 <html>
@@ -511,4 +515,6 @@ modeSwitch.addEventListener("click" , () =>{
     </script>
 </body>
 >>>>>>> 692c9d0 (intial commit)
+=======
+>>>>>>> 3fe7ec1 (new changes)
 </html>
