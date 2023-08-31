@@ -55,7 +55,7 @@ $conn->close();
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     
-    <title>Recipeless Book</title>
+    <title>Recipe Book</title>
 </head>
 <body>
     
