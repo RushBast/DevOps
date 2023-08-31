@@ -1,7 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 # Use an official PHP runtime as a parent image
 FROM php:7.4-apache
+
 
 # Set the working directory in the container
 WORKDIR /var/www/html
@@ -14,17 +14,17 @@ EXPOSE 80
 
 # Define any environment variables if needed
 ENV MYSQL_HOST=localhost:3306
-ENV MYSQL_USER=root
-ENV MYSQL_PASSWORD=root
-ENV MYSQL_DATABASE=recipebook
+ENV MYSQL_USER="root"
+ENV MYSQL_PASSWORD="root"
+ENV MYSQL_DATABASE="recipebook"
 
 # Start the Apache web server
 CMD ["apache2-foreground"]
-=======
+
 # Use an official PHP runtime as a parent image
-=======
+
 # Use an official PHP runtime as the base image
->>>>>>> 3fe7ec1 (new changes)
+
 FROM php:7.4-apache
 
 # Set the working directory inside the container
@@ -38,4 +38,7 @@ EXPOSE 80
 
 # Start the Apache web server
 CMD ["apache2-foreground"]
->>>>>>> 692c9d0 (intial commit)
+
+
+FROM php:7
+RUN docker-php-ext-install mysqli
