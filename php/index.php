@@ -139,8 +139,13 @@ $conn->close();
     </nav>
 
     <section class="home">
+
         <div class="text"><b>Recipe Book</b></div>
         <br><div class="text">Welcome, <?php echo $username1; ?>!</div>
+
+        <div class="text"><b>RECIPE BOOK</b></div>
+        <br><div class="text">Welcome, <?php echo $username; ?>!</div>
+
         <div class="alang">
         <a href="indian.php"><div class="segment"> Indian</div></a>
         <a href="continental.php"><div class="segment1"> Continental</div></a>
