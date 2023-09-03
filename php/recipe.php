@@ -1,12 +1,9 @@
- <?php
-//session_start();
-if( empty(session_id()) && !headers_sent()){
-    session_start();
-    // Check if the user is logged in, otherwise redirect to the login page
-    if (!isset($_SESSION['user_id'])) {
-        header("Location: login.php");
-        exit();
-    }
+<?php
+session_start();
+// Check if the user is logged in, otherwise redirect to the login page
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
 }
 
 // Retrieve the user ID from the session
@@ -14,7 +11,7 @@ $user_id = $_SESSION['user_id'];
 
 // Retrieve the username from the database based on the user ID
 // Replace the database connection details with your own
-$servername = "mysql_db";
+$servername = "localhost:3306";
 $username = "root";
 $password = "root";
 $dbname = "recipebook";
@@ -25,10 +22,10 @@ if ($conn->connect_error) {
 }
 
 // Fetch the username from the database using the user ID
-$sql = "SELECT username FROM users WHERE user_id = '$user_id'";
+$sql = "SELECT username FROM Users WHERE user_id = '$user_id'";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
+if ($result->num_rows == 1) {
     $row = $result->fetch_assoc();
     $username = $row['username'];
 } else {
@@ -142,7 +139,7 @@ $conn->close();
     </nav>
     <?php
 // Establish database connection
-$servername = "mysql_db";
+$servername = "localhost:3306";
 $username = "root";
 $password = "root";
 $dbname = "recipebook";
@@ -175,7 +172,7 @@ if (isset($_GET['id'])) {
         if ($images_result->num_rows > 0) {
             echo "<ul>";
             while ($images_row = $images_result->fetch_assoc()) {
-                echo '<img src="../' . $images_row['filepath'] . '">';
+                echo '<img src="' . $images_row['filepath'] . '">';
             }
             echo "</ul>";
         }

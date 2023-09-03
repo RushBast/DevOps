@@ -14,8 +14,3 @@ RUN docker-php-ext-install mysqli
 # Copy all project files into the container
 # COPY . /var/www/html/
 
-
-# COPY ./php/ .
-
-# Expose port 80 for Apache
-# EXPOSE 80
