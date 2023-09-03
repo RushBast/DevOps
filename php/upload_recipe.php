@@ -1,4 +1,3 @@
-]
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,8 +10,7 @@
     
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
- 
-    
+     
     <title>Upload Your Recipe</title>
     <style>
     </style>

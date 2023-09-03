@@ -25,4 +25,8 @@ jobs:
       run: docker build -t rushbast/webtrial .
 
     - name: Push Docker Image
+
       run: docker push rushbast/webtrial
+
+      run: docker push rushbast/webtrial
+

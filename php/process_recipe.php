@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3fe7ec1 (new changes)
+ 
 <?php
 // Establish database connection
-$servername = "localhost:3306";
+$servername = "mysql_db";
 $username = "root";
 $password = "root";
 $dbname = "recipebook";
@@ -123,7 +120,7 @@ $conn->close();
 =======
 <?php
 // Establish database connection
-$servername = "localhost:3306";
+$servername = "mysql_db";
 $username = "root";
 $password = "root";
 $dbname = "recipebook";
@@ -238,6 +235,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Close the database connection
 $conn->close();
 ?>
->>>>>>> 692c9d0 (intial commit)
-=======
->>>>>>> 3fe7ec1 (new changes)
+>>>>>>> 692c9d0 (intial commit) 
