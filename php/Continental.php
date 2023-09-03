@@ -1,7 +1,7 @@
  
 <?php
 // Establish database connection
-$servername = "localhost:3306";
+$servername = "mysql_db";
 $username = "root";
 $password = "root";
 $dbname = "recipebook";
@@ -34,7 +34,7 @@ if ($conn->connect_error) {
         <header>
             <div class="image-text">
                 <span class="image">
-                    <!--<img src="logo.png" alt="">-->
+                    <!--<img src="../logo.png" alt="">-->
                 </span>
 
                 <div class="text logo-text">
@@ -128,7 +128,7 @@ if ($conn->connect_error) {
     
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo '<div class="multibox"><a href="recipe.php?id=' . $row['recipe_id'] . '"><img src="' . $row['image_id'] . '">' . $row['title'] . '</a></div>';
+                    echo '<div class="multibox"><a href="recipe.php?id=' . $row['recipe_id'] . '"><img src="../' . $row['image_id'] . '">' . $row['title'] . '</a></div>';
                 }
             }
     ?>
@@ -144,7 +144,7 @@ if ($conn->connect_error) {
     
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo '<div class="multibox"><a href="recipe.php?id=' . $row['recipe_id'] . '"><img src="' . $row['image_id'] . '">' . $row['title'] . '</a></div>';
+                    echo '<div class="multibox"><a href="recipe.php?id=' . $row['recipe_id'] . '"><img src="../' . $row['image_id'] . '">' . $row['title'] . '</a></div>';
                 }
             }
           ?>
@@ -160,7 +160,7 @@ if ($conn->connect_error) {
     
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo '<div class="multibox"><a href="recipe.php?id=' . $row['recipe_id'] . '"><img src="' . $row['image_id'] . '">' . $row['title'] . '</a></div>';
+                    echo '<div class="multibox"><a href="recipe.php?id=' . $row['recipe_id'] . '"><img src="../' . $row['image_id'] . '">' . $row['title'] . '</a></div>';
                 }
             }
           ?>
@@ -176,7 +176,7 @@ if ($conn->connect_error) {
     
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo '<div class="multibox"><a href="recipe.php?id=' . $row['recipe_id'] . '"><img src="' . $row['image_id'] . '">' . $row['title'] . '</a></div>';
+                    echo '<div class="multibox"><a href="recipe.php?id=' . $row['recipe_id'] . '"><img src="../' . $row['image_id'] . '">' . $row['title'] . '</a></div>';
                 }
             }
           ?>

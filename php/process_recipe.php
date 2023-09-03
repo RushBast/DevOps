@@ -1,7 +1,7 @@
  
 <?php
 // Establish database connection
-$servername = "localhost:9001";
+$servername = "mysql_db";
 $username = "root";
 $password = "root";
 $dbname = "recipebook";
@@ -120,7 +120,7 @@ $conn->close();
 =======
 <?php
 // Establish database connection
-$servername = "localhost:3306";
+$servername = "mysql_db";
 $username = "root";
 $password = "root";
 $dbname = "recipebook";
