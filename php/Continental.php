@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3fe7ec1 (new changes)
+ 
 <?php
 // Establish database connection
-$servername = "localhost:3306";
+$servername = "mysql_db";
 $username = "root";
 $password = "root";
 $dbname = "recipebook";
@@ -219,4 +216,6 @@ modeSwitch.addEventListener("click" , () =>{
 
 
 </body>
-</html>
+
+</html> 
+

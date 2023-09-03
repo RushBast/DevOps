@@ -1,42 +1,16 @@
+# Use the official PHP image with Apache
+FROM php:8.0-apache
 
-# Use an official PHP runtime as a parent image
-FROM php:7.4-apache
+WORKDIR /var/www/html
+
+RUN apt-get update -y && apt-get install -y libmariadb-dev
+
 RUN docker-php-ext-install mysqli
 
+# Install mysqli extension
 
-# Set the working directory in the container
-WORKDIR /var/www/html
+# RUN docker-php-ext-install mysqli
 
-# Copy your application code to the container
-COPY . /var/www/html
-
-# Expose the port your web server runs on
-EXPOSE 80
-
-# Define any environment variables if needed
-ENV MYSQL_HOST=localhost:3306
-ENV MYSQL_USER="root"
-ENV MYSQL_PASSWORD="root"
-ENV MYSQL_DATABASE="recipebook"
-
-# Start the Apache web server
-CMD ["apache2-foreground"]
-
-# Use an official PHP runtime as a parent image
-
-# Use an official PHP runtime as the base image
-
-FROM php:7.4-apache
-
-# Set the working directory inside the container
-WORKDIR /var/www/html
-
-# Copy your PHP application code into the container
-COPY ./php/ .
-
-# Expose the port for Apache
-EXPOSE 80
-
-# Start the Apache web server
-CMD ["apache2-foreground"]
+# Copy all project files into the container
+# COPY . /var/www/html/
 

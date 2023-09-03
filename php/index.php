@@ -11,7 +11,7 @@ $user_id = $_SESSION['user_id'];
 
 // Retrieve the username from the database based on the user ID
 // Replace the database connection details with your own
-$servername = "localhost:3306";
+$servername = "mysql_db";
 $username = "root";
 $password = "root";
 $dbname = "recipebook";
@@ -22,15 +22,15 @@ if ($conn->connect_error) {
 }
 
 // Fetch the username from the database using the user ID
-$sql = "SELECT username FROM Users WHERE user_id = '$user_id'";
+$sql = "SELECT username FROM users WHERE user_id = '$user_id'";
 $result = $conn->query($sql);
 
 if ($result->num_rows == 1) {
     $row = $result->fetch_assoc();
-    $username = $row['username'];
+    $username1 = $row['username'];
 } else {
     // Handle the case if the user is not found in the database
-    $username = "Unknown";
+    $username1 = "Unknown";
 }
 
 $conn->close();
@@ -139,8 +139,13 @@ $conn->close();
     </nav>
 
     <section class="home">
+
+        <div class="text"><b>Recipe Book</b></div>
+        <br><div class="text">Welcome, <?php echo $username1; ?>!</div>
+
         <div class="text"><b>RECIPE BOOK</b></div>
         <br><div class="text">Welcome, <?php echo $username; ?>!</div>
+
         <div class="alang">
         <a href="indian.php"><div class="segment"> Indian</div></a>
         <a href="continental.php"><div class="segment1"> Continental</div></a>

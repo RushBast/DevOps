@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3fe7ec1 (new changes)
 <?php
 session_start();
 // Check if the user is logged in, otherwise redirect to the login page
